@@ -152,6 +152,10 @@ public class PluginProcessor extends AbstractProcessor {
             data.put("libraries", new ArrayList<>(Arrays.asList(libraries)));
         }
 
+        if (annotation.foliaSupport()) {
+            data.put("folia-supported", true);
+        }
+
         try {
             Yaml yaml = new Yaml();
             FileObject resource = this.processingEnv.getFiler().createResource(StandardLocation.CLASS_OUTPUT, "", "plugin.yml");
