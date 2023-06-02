@@ -152,7 +152,7 @@ public class PluginProcessor extends AbstractProcessor {
             data.put("libraries", new ArrayList<>(Arrays.asList(libraries)));
         }
 
-        if (annotation.foliaSupport()) {
+        if (annotation.foliaSupported()) {
             data.put("folia-supported", true);
         }
 
